@@ -1,0 +1,34 @@
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/mydatabase?createDatabaseIfNotExist=true&serverTimezone=UTC
+  username: myuser
+  password: mypassword
+  driver-class-name: org.postgresql.Driver
+spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs.path: /api-docs
+
+spring:
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+movie.database:
+  genres[0]: comedy
+  genres[1]: drama
+  genres[2]: romantic
+  genres[3]: sci-fi
+  genres[4]: horror
+  genres[5]: adventure
+  genres[6]: action
+  genres[7]: animated
